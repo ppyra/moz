@@ -1,3 +1,9 @@
+p,
+a,
+label {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .custom-container {
     margin: 20px;
 }
@@ -9,6 +15,11 @@
 
 .product-list {
     width: 100%;
+}
+
+.btn-sm-header {
+    height: 23px;
+    font-size: x-small;
 }
 
 .custom-container .btn-border {
