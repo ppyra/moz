@@ -1,0 +1,255 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Faktura VAT</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+
+    <div class="custom-container">
+
+        <div class="bg-light">
+            <div class="m-4">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-6 fw-bold">
+                        <li class="breadcrumb-item active"><a href="#">EKATALOG</a></li>
+                        <li class="breadcrumb-item" aria-current="page">MODUŁ OBSŁUGI ZAMÓWIEŃ</li>
+                        <li class="breadcrumb-item active"><a href="#">SZCZEGÓŁY ZLECENIA</a></li>
+                    </ol>
+                </nav>
+                <p class="d-inline fs-4 fw-bold text-center">ZLECENIE-NR.123 456 789
+                    <span type="button" class="d-inline btn btn-warning btn-sm rounded-pill text-white text-uppercase m-3 btn-sm-header" data-bs-toggle="modal" data-bs-target="#staticBackdrop">W REALIZACJI</span>
+                </p>
+            </div>
+
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Invoice VAT</button>
+
+            <div class="offcanvas offcanvas-bottom rounded-3 m-1" style="height: 550px;" tabindex="-1" id="offcanvasBottom">
+                <div class="m-3">
+                    <div class="offcanvas-header fs-4 fw-bold align-items-center">
+                        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Faktura VAT <span class="text-secondary">1194364</span></h5>
+
+                        <button type="button" class="btn btn-outline-success btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase m-3">Potwierdzone</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase m-2">Korygująca</button>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+
+                        <div class="row align-items-center">
+                            <div class="col-2">
+                                <div class="d-flex flex-column">
+                                    <label class="fw-bolder">Arek Milik</label>
+                                    <label class="fs-placeholder text-secondary">Imię i nazwisko</label>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="d-flex flex-column">
+                                    <label>Muszkieterów 15, 00-268 Warszawa</label>
+                                    <label class="text-secondary fs-placeholder">Adres</label>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="d-flex flex-column">
+                                    <label>8954267145</label>
+                                    <label class="text-secondary fs-placeholder">NIP</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="d-flex flex-column">
+                                    <label>13.10.2019</label>
+                                    <label class="text-secondary fs-placeholder">Data utworzenia</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="d-flex flex-column">
+                                    <label>11:38</label>
+                                    <label class="text-secondary fs-placeholder">Godzina zatwierdzenia</label>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="d-flex flex-column">
+                                    <label>9022WA</label>
+                                    <label class="text-secondary fs-placeholder">Zatwierdzono przez</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center col-5 mt-3 mb-3">
+                            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="submit">Korekta danych</button>
+                            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="submit">Korekta zerująca</button>
+                            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="submit">Drukuj</button>
+                        </div>
+
+
+
+                        <ul class="list-group overflow-auto" style="height: 300px;">
+                            <li class="list-group-item">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex flex-column">
+                                            <label class="fw-bolder">Philips 70PUS6704/12</label>
+                                            <label class="fs-placeholder text-secondary">Nazwa produktu</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="d-flex flex-column">
+                                            <label>telewizor LED</label>
+                                            <label class="text-secondary fs-placeholder">Grupa towarowa</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>123456</label>
+                                            <label class="text-secondary fs-placeholder">PLU</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>1</label>
+                                            <label class="text-secondary fs-placeholder">Liczba</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Cena jedn.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Razem</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex flex-column">
+                                            <label class="fw-bolder">Philips 70PUS6704/12</label>
+                                            <label class="fs-placeholder text-secondary">Nazwa produktu</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="d-flex flex-column">
+                                            <label>telewizor LED</label>
+                                            <label class="text-secondary fs-placeholder">Grupa towarowa</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>123456</label>
+                                            <label class="text-secondary fs-placeholder">PLU</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>1</label>
+                                            <label class="text-secondary fs-placeholder">Liczba</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Cena jedn.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Razem</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex flex-column">
+                                            <label class="fw-bolder">Philips 70PUS6704/12</label>
+                                            <label class="fs-placeholder text-secondary">Nazwa produktu</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="d-flex flex-column">
+                                            <label>telewizor LED</label>
+                                            <label class="text-secondary fs-placeholder">Grupa towarowa</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>123456</label>
+                                            <label class="text-secondary fs-placeholder">PLU</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>1</label>
+                                            <label class="text-secondary fs-placeholder">Liczba</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Cena jedn.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex flex-column">
+                                            <label>3 458,00 zł</label>
+                                            <label class="text-secondary fs-placeholder">Razem</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

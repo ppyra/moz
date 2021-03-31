@@ -4,6 +4,13 @@ label {
     font-family: 'Noto Sans', sans-serif;
 }
 
+
+/* font lato */
+
+.fs-placeholder {
+    font-size: 0.8rem;
+}
+
 .custom-container {
     margin: 20px;
 }
