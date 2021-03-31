@@ -28,6 +28,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
+
     <div class="custom-container">
 
         <div class="bg-light">
@@ -71,7 +72,7 @@
                 <p class="mt-4 fs-4 fw-bold">Sprzedaż z odbiorem w sklepie</p>
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex flex-row align-items-center">
+                        <div class="d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             <div class="d-flex flex-column col-4">
                                 <div class="d-flex flex-row justify-content-around align-items-center">
                                     <div class="d-flex flex-column">
@@ -164,6 +165,144 @@
                 </div>
 
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" style="max-width: 90%;">
+                    <div class="modal-content">
+                        <div class="modal-header align-items-center">
+                            <h5 class="modal-title fw-bolder" id="staticBackdropLabel">Szczegóły <span class="text-secondary">Philips 70PUS6704/12</span></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-4">
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 170px;">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="flex-column" style="width: 100%;">
+                                                <label class="control-label fw-bolder" id="name">Philips 70PUS6704/12</label>
+                                                <div class="row gx-1">
+                                                    <div class="col-2">
+                                                        <label class="control-label text-secondary" id="type">Telewizor LED</label>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <label class="control-label text-secondary" id="number">1194364</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div class="d-flex flex-column">
+                                                <label for="name" class="control-label">3</label>
+                                                <label class="control-label text-secondary" id="name">Liczba</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div class="d-flex flex-column">
+                                                <label for="name" class="control-label">11 456,00zł</label>
+                                                <label class="control-label text-secondary" id="name">Razem</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="d-flex flex-column">
+                                                <label for="name" class="control-label">w trakcie</label>
+                                                <label class="control-label text-secondary" id="name">Status</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="width: 100%;">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="d-flex flex-column">
+                                                <label for="name" class="control-label text-secondary">Cena katalogowa</label>
+                                                <label class="control-label text-secondary" id="name">Minus 1 000 zł na zakup trzech telewizorów marki Philips</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="d-flex flex-column">
+                                                <label for="name" class="control-label text-secondary">3 999,00 zł</label>
+                                                <label class="control-label text-secondary" id="name">-333,33 zł</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 row">
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-light border-0">
+                                        <div class="row">
+                                            <div class="col-1">+</div>
+                                            <div class="col-4">
+                                                <label class="fw-bolder" id="name">Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat</label>
+                                            </div>
+                                            <div class="col-1">
+                                                <!-- <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill" style="max-width:fit-content;"><i class="bi bi-check-circle"></i> GWARANCJA</a> -->
+                                                <button type="button" class="btn btn-outline-secondary btn-light btn-sm rounded-pill">GWARANCJA</button>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="d-flex flex-column">
+                                                    <label for="price">380,00</label>
+                                                    <label class="text-secondary" id="price">Cena</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="d-flex flex-column">
+                                                    <label for="status">do opłacenia</label>
+                                                    <label class="text-secondary" id="status">Status</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="button" class="btn btn-outline-primary">Anuluj</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light border-0">
+                                        <div class="row">
+                                            <div class="col-1">+</div>
+                                            <div class="col-5">
+                                                <label class="fw-bolder" id="name">Pakiet MAX - wniesienie, przykręcenie podstawy, podłączenie, uruchomienie, wyszukanie kanałów cyfrowych</label>
+                                            </div>
+                                            <div class="col-1">
+                                                <div class="col-2 "><i class="bi bi-check-circle"></i>
+                                                    <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> USŁUGA</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="d-flex flex-column">
+                                                    <label for="price">380,00</label>
+                                                    <label class="text-secondary" id="price">Cena</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="d-flex flex-column">
+                                                    <label for="status">do opłacenia</label>
+                                                    <label class="text-secondary" id="status">Status</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-1">
+                                                <!-- <button type="button" class="btn btn-outline-primary">Anuluj</button> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
