@@ -11,6 +11,10 @@ label {
     font-size: 0.8rem;
 }
 
+.fs-list-item {
+    font-size: 0.9rem;
+}
+
 .custom-container {
     margin: 20px;
 }
