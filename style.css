@@ -40,9 +40,26 @@ label {
     z-index: 1;
 }
 
+.checkmark {
+    position: absolute;
+    top: -5;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
 .card .btn-borderr {
     position: absolute;
     left: 2%;
     top: 0;
     z-index: 1;
+}
+
+.cell {
+    width: 33%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
 }
