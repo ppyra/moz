@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <title>Wystawienie faktury</title>
 </head>
 
@@ -67,73 +69,88 @@
                                 </li>
                                 <li class="list-group-item border-0 border-bottom">
                                     <div class="row align-items-center">
-                                        <div class="col-1 d-flex align-items-center d-flex justify-content-between">
+                                        <div class="col-1 d-flex align-items-center justify-content-between">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                                             </div>
                                             <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-6">
                                             <div class="d-flex flex-column">
                                                 <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
-                                                <label class="fs-placeholder text-secondary">Dokument</label>
+                                                <div class="flex-row">
+                                                    <label class="fs-placeholder text-secondary">Dokument</label>
+                                                    <label class="fs-placeholder text-secondary ms-4">119404586</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-1">
+                                            <div class="d-flex justify-content-around align-items-center">
+                                                <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">-</button>
+                                                <label>1</label>
+                                                <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">+</button>
                                             </div>
                                         </div>
 
                                         <div class="col-2">
                                             <div class="d-flex flex-column">
-                                                <label>13.10.2019</label>
-                                                <label class="text-secondary fs-placeholder" id="name">Data utworzenia</label>
+                                                <label>3 458,00 zł</label>
+                                                <label class="text-secondary fs-placeholder" id="name">Razem</label>
                                             </div>
                                         </div>
-
                                         <div class="col-2">
                                             <div class="d-flex flex-column">
-                                                <label>123456</label>
-                                                <label class="text-secondary fs-placeholder" id="name">Nr dokumentu</label>
+                                                <label>w trakcie</label>
+                                                <label class="text-secondary fs-placeholder" id="name">Status</label>
                                             </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-outline-secondary">Szczegóły</button>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="list-group-item border-0 border-bottom">
-                                    <div class="row border border-light rounded align-items-center">
-
-                                        <div class="col-1 d-flex align-items-center d-flex justify-content-between">
+                                    <div class="row align-items-center">
+                                        <div class="col-1 d-flex align-items-center justify-content-between">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                                             </div>
                                             <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-6">
                                             <div class="d-flex flex-column">
                                                 <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
-                                                <label class="fs-placeholder text-secondary">Dokument</label>
+                                                <div class="flex-row">
+                                                    <label class="fs-placeholder text-secondary">Dokument</label>
+                                                    <label class="fs-placeholder text-secondary ms-4">119404586</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-1">
+                                            <div class="d-flex justify-content-around align-items-center">
+                                                <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">-</button>
+                                                <label>2</label>
+                                                <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">+</button>
                                             </div>
                                         </div>
 
                                         <div class="col-2">
                                             <div class="d-flex flex-column">
-                                                <label>13.10.2019</label>
-                                                <label class="text-secondary fs-placeholder" id="name">Data utworzenia</label>
+                                                <label>3 458,00 zł</label>
+                                                <label class="text-secondary fs-placeholder" id="name">Razem</label>
                                             </div>
                                         </div>
-
                                         <div class="col-2">
                                             <div class="d-flex flex-column">
-                                                <label>123456</label>
-                                                <label class="text-secondary fs-placeholder" id="name">Nr dokumentu</label>
+                                                <label>w trakcie</label>
+                                                <label class="text-secondary fs-placeholder" id="name">Status</label>
                                             </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-outline-secondary">Szczegóły</button>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
-                            <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" type="submit">Zapisz</button>
+                            <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" type="submit">Potwierdzam</button>
                         </div>
                     </div>
                 </div>
